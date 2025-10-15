@@ -1,12 +1,12 @@
 from pprint import pprint # подключаем pprint для красивого отображения дерева
 
-def gen_bin_tree(height='6', Root='2'): # создаем дерево 
+def gen_bin_tree(height='4', Root='3'): # создаем дерево 
 
     if int(height) in [0,1]:
         return {"content": Root, "left": None, "right": None} # проверяем остаточную длинну дерева для корректной работы
     
-    left_child = gen_bin_tree(int(height) - 1, int(Root) * 3)
-    right_child = gen_bin_tree(int(height) - 1, int(Root) + 4)
+    left_child = gen_bin_tree(int(height) - 1, int(Root) + 2)
+    right_child = gen_bin_tree(int(height) - 1, int(Root) * 3)
 
 # расчет левых и правых ветвей
 
